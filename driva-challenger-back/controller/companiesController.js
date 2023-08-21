@@ -32,15 +32,27 @@ const companies  = [
     }
 ]
 
+const searchCompany = (id) => {
+
+   const result = companies.filter((company) => company.id == id);
+
+   return result;
+}
+
 const listAllcompanies  = (req, res) => {
-   
     return res.status(200).json({companies});
 }
 
 const getCompany = (req, res) => {
     const companyId = req.params.id;
-    return companies[companyId];
+    const foundCompany = searchCompany(companyId);
 
+    if (foundCompany.length == 0){
+        return res.status(404).send("Empresa não existe");
+
+    } else {
+        return res.status(200).json(searchCompany(companyId));
+    }    
 }
 
 module.exports = {
