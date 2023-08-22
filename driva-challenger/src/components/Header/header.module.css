@@ -1,0 +1,22 @@
+.Header {
+    display:  flex;
+    margin-left: 100px;
+}
+
+.Header > h1 {
+    margin-left: 10px;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+}
+
+img {
+    width: 123px;
+    height: 30px;
+    margin-top: 10px;
+}

@@ -3,8 +3,15 @@ import style from './header.module.css';
 
 const Header = () => {
   return (
-    <header>
-        <h1 className={style.header}>Driva</h1>
+    <header className={style.Header}>
+        <img src="\src\assets\driva-logo.png" alt="" />
+
+        <nav className={style.navBar}>
+          <p><a href="#">Home</a></p>
+          <p><a href="#">Sobre</a></p>
+          <p><a href="#">Contato</a></p>
+        </nav>
+        
     </header>
   )
 }
